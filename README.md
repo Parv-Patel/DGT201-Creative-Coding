@@ -1,30 +1,28 @@
 # DGT201-Creative-Coding
 
-# Functionality:
+## Functionality:
 
-## Algorithm Selection:
-Users can switch between FCFS, SJF, and Round Robin algorithms using a dropdown menu 
-Adjustable time quantum for Round Robin algorithm using a slider
+### Algorithm Selection:
+- Users can switch between FCFS, SJF, and Round Robin algorithms using a dropdown menu 
+- Adjustable time quantum for Round Robin algorithm using a slider
 
-## Process Visualization:
-Displays process information including ID, arrival time, burst time, remaining time, and status
-Color-coded process blocks for easy identification
-Real-time execution timeline
-Visual representation of waiting queue and current executing process
+### Process Visualization:
+- Displays process information including ID, arrival time, burst time, remaining time, and status
+- Color-coded processes blocks for easy identification
+- Real-time execution of timeline
+- Visual representation of waiting queue and current executing process
 
-## Interactive Controls:
-Space bar to pause/resume simulation
-'R' key to restart simulation
-Time quantum adjustment slider for Round Robin
-Real-time algorithm switching
+### Interactive Controls:
+- Space bar to pause/replay simulation
+- 'R' key to restart or restart simulation
+- Time quantum adjustment slider for Round Robin
 
-## Visual Elements:
-Clean and organized UI layout
-Color-coded process blocks
-Timeline visualization
-Process status indicators
-Waiting queue visualization
-Execution history display
+### Visual Elements:
+- Color-coded process blocks
+- Timeline visualization
+- Process status indicators
+- Waiting queue visualization
+- Execution history display
 
 
 ## FullScreen Link
