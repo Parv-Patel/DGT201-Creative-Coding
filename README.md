@@ -1,4 +1,4 @@
-# DGT201-Creative-Coding
+# CPU Scheduling Processes Simulator (DGT201-Creative-Coding)
 
 ## Functionality:
 
