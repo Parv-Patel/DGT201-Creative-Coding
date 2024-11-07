@@ -1,5 +1,5 @@
-// FCFS & SJF & Round Robin Simulation Code
-// Parv Patel - AU2140180
+// FCFS & SJF & Round Robin 
+// AU2140180 - Parv Patel
 
 let processes = [];
 let currentTime = 0;
@@ -8,7 +8,7 @@ let waitingQueue = [];
 let completedProcesses = [];
 let executionHistory = [];
 let isRunning = true;
-let currentAlgorithm = 'RoundRobin'; // Changed default to Round Robin
+let currentAlgorithm = 'RoundRobin'; // Set default to Round Robin
 let algorithmSelect;
 let timeQuantum = 2; // Time quantum for Round Robin
 
@@ -16,7 +16,7 @@ function setup() {
     createCanvas(1200, 700);
     frameRate(1);
     
-    // Create algorithm selection dropdown - moved to top-right
+    // Create algorithm selection using dropdown - displaying on top-right corner
     algorithmSelect = createSelect();
     algorithmSelect.position(900, 20); // Moved to right side
     algorithmSelect.option('First Come First Serve (FCFS)', 'FCFS');
@@ -77,7 +77,7 @@ function draw() {
 }
 
 function drawTimeQuantumSlider() {
-    // Update time quantum from slider
+    // Update time quantum from slider range
     timeQuantum = timeQuantumSlider.value();
     
     fill(0);
@@ -88,7 +88,7 @@ function drawTimeQuantumSlider() {
 function drawAlgorithmLabel() {
     textSize(16);
     fill(0);
-    // Display the full algorithm name
+    // Display the algorithm name
     text(`Current Algorithm: ${currentAlgorithm}`, 600, 40);
     
     // Add specific Time Quantum display for Round Robin
@@ -99,7 +99,7 @@ function drawAlgorithmLabel() {
 }
 
 function updateSimulation() {
-    // Check for new arrivals
+    // Check for new arrival processes
     for (let i = processes.length - 1; i >= 0; i--) {
         if (processes[i].arrivalTime === currentTime) {
             let process = processes.splice(i, 1)[0];
@@ -115,7 +115,7 @@ function updateSimulation() {
         }
     });
     
-    // If no current process, get next from queue based on algorithm
+    // If no current process, then get next from queue based on selected algorithm
     if (!currentProcess && waitingQueue.length > 0) {
         if (currentAlgorithm === 'SJF') {
             // Sort by remaining time for SJF
@@ -149,12 +149,12 @@ function updateSimulation() {
             color: currentProcess.color
         });
         
-        // Round Robin specific logic
+        // logic of Round Robin CPU Scheduling process
         if (currentAlgorithm === 'RoundRobin') {
-            // Check if process has used its time quantum
+            // Check process has used its time quantum
             if (currentProcess.executedTime >= timeQuantum || currentProcess.remainingTime === 0) {
                 if (currentProcess.remainingTime > 0) {
-                    // If process not complete, add back to waiting queue
+                    // If process is still not complete, then add that process back to waiting queue
                     currentProcess.state = "Waiting";
                     waitingQueue.push(currentProcess);
                     currentProcess.executedTime = 0;
@@ -178,7 +178,6 @@ function updateSimulation() {
     currentTime++;
 }
 
-// Rest of the functions remain the same as in the previous implementation
 function drawTitle() {
     textSize(24);
     fill(0);
@@ -350,14 +349,14 @@ function drawExecutionHistory() {
 function drawControls() {
     fill(0);
     textSize(14);
-    text("Controls:", 20, 580);
+    text("Controls:", 20, 650);
     text("Press SPACE to pause/resume", 20, 600);
-    text("Press R to restart simulation", 250, 600);
+    text("Press R to restart simulation", 200, 600);
 }
 
 function keyPressed(event) {
     if (key === ' ') {
-        event.preventDefault();
+		event.preventDefault();
         isRunning = !isRunning;
     } else if (key === 'r' || key === 'R') {
         resetSimulation();
