@@ -352,7 +352,7 @@ function drawControls() {
     textSize(14);
     text("Controls:", 20, 650);
     text("Press SPACE to pause/resume", 20, 670);
-    text("Press R to restart simulation", 200, 670);
+    text("Press R to restart simulation", 250, 670);
 }
 
 function keyPressed() {
