@@ -355,8 +355,9 @@ function drawControls() {
     text("Press R to restart simulation", 250, 600);
 }
 
-function keyPressed() {
+function keyPressed(event) {
     if (key === ' ') {
+        event.preventDefault();
         isRunning = !isRunning;
     } else if (key === 'r' || key === 'R') {
         resetSimulation();
