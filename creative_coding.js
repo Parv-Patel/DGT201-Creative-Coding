@@ -89,7 +89,7 @@ function drawAlgorithmLabel() {
     textSize(16);
     fill(0);
     // Display the full algorithm name
-    text(`Current Algorithm: ${currentAlgorithm}`, 700, 40);
+    text(`Current Algorithm: ${currentAlgorithm}`, 600, 40);
     
     // Add specific Time Quantum display for Round Robin
     if (currentAlgorithm === 'RoundRobin') {
