@@ -1,5 +1,5 @@
 // FCFS & SJF & Round Robin 
-// AU2140180 - Parv Patel
+// Parv Patel - AU2140180
 
 let processes = [];
 let currentTime = 0;
@@ -349,9 +349,9 @@ function drawExecutionHistory() {
 function drawControls() {
     fill(0);
     textSize(14);
-    text("Controls:", 20, 650);
+    text("Controls:", 20, 580);
     text("Press SPACE to pause/resume", 20, 600);
-    text("Press R to restart simulation", 200, 600);
+    text("Press R to restart simulation", 250, 600);
 }
 
 function keyPressed(event) {
