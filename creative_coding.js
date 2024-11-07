@@ -350,9 +350,9 @@ function drawExecutionHistory() {
 function drawControls() {
     fill(0);
     textSize(14);
-    text("Controls:", 20, 650);
-    text("Press SPACE to pause/resume", 20, 670);
-    text("Press R to restart simulation", 250, 670);
+    text("Controls:", 20, 580);
+    text("Press SPACE to pause/resume", 20, 600);
+    text("Press R to restart simulation", 250, 600);
 }
 
 function keyPressed() {
