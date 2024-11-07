@@ -3,8 +3,7 @@
 # Functionality:
 
 ## Algorithm Selection:
-Users can switch between FCFS, SJF, and Round Robin algorithms using a dropdown menu
-Dynamic visualization updates based on selected algorithm
+Users can switch between FCFS, SJF, and Round Robin algorithms using a dropdown menu 
 Adjustable time quantum for Round Robin algorithm using a slider
 
 ## Process Visualization:
